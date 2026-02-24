@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Commit and Push
+      - name: Auto Commit Push
         uses: offensive-vk/auto-commit-push@v8
         with:
           name: 'Your Name'

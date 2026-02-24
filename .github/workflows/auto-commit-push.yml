@@ -1,9 +1,6 @@
 name: Auto Commit & Push
 
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
 
 permissions:
@@ -12,12 +9,13 @@ permissions:
 jobs:
   auto-commit-push:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
-      - name: Auto commit and push to main
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Commit and Push
+        uses: offensive-vk/auto-commit-push@v8
         with:
-          commit_message: "Auto push to main from master complete"
+          name: 'Your Name'
+          email: 'your@email.com'
+          message: 'Commit Message'
           branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Commit and Push
-        uses: offensive -vk/auto-commit-push@v8
+        uses: offensive-vk/auto-commit-push@v8
         with:
           name: 'bhoj'
           email: 'gcbhoj@gmail.com'
